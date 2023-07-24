@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>interactive geometry</title>
+    <!-- Bootstrap cdn  -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <!--header goes here  -->
+    <!-- Navbar starts -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container">
+        <div class="d-flex flex-column">
+          <h3>Interactive</h3>
+          <h4>Geometry Genius</h4>
+        </div>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse justify-content-end"
+          id="navbarNavAltMarkup"
+        >
+          <div class="navbar-nav">
+            <a class="nav-link btn btn-primary" href="#">Blog</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- Navbar ends -->
+    <!-- header ends -->
+    <!-- main section starts -->
+    <section class="container">
+      <div class="row">
+        <div class="col-md-8 row g-3">
+          <div class="col-md-4">
+            <div class="card h-100">
+              <div class="d-flex justify-content-center mt-2">
+                <img
+                  src="./images/triangle.png"
+                  class="card-img-top w-50"
+                  alt="..."
+                />
+              </div>
+              <div class="card-body text-center">
+                <h5 class="card-title">Triangle</h5>
+                <p class="card-text">Area (A) = 0.5 X b X h</p>
+                <p class="card-text">b = 10 cm, h = 4 cm</p>
+                <div class="input-group mb-3">
+                  <input
+                    type="text"
+                    class="form-control bg-body-secondary"
+                    id="triangle-b"
+                    placeholder="b"
+                    aria-label="Username"
+                  />
+                  <span class="input-group-text">cm</span>
+                  <input
+                    type="text"
+                    class="form-control bg-body-secondary"
+                    id="triangle-h"
+                    placeholder="h"
+                    aria-label="Server"
+                  />
+                  <span class="input-group-text">cm</span>
+                </div>
+              </div>
+              <div class="card-footer bg-white border-0">
+                <button href="#" class="btn btn-primary w-100" onclick="captureElement('triangle', 'triangle-b', 'triangle-h' )">Calculate</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card h-100">
+              <div class="d-flex justify-content-center mt-2">
+                <img
+                  src="./images/rectangle.png"
+                  class="card-img-top w-50"
+                  alt="..."
+                />
+              </div>
+              <div class="card-body text-center">
+                <h5 class="card-title">Rectangle</h5>
+                <p class="card-text">Area (A) = w X l</p>
+                <p class="card-text">w = 10 cm, l = 4 cm</p>
+                <div class="input-group mb-3">
+                    <input
+                      type="text"
+                      class="form-control bg-body-secondary"
+                      id="rectangle-w"
+                      placeholder="w"
+                      aria-label="Username"
+                    />
+                    <span class="input-group-text">cm</span>
+                    <input
+                      type="text"
+                      class="form-control bg-body-secondary"
+                      id="rectangle-l"
+                      placeholder="l"
+                      aria-label="Server"
+                    />
+                    <span class="input-group-text">cm</span>
+                  </div>
+              </div>
+              <div class="card-footer bg-white border-0">
+                <button href="#" class="btn btn-primary w-100" onclick="captureElement('rectangle', 'rectangle-w', 'rectangle-l')">Calculate</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card h-100">
+              <div class="d-flex justify-content-center mt-2">
+                <img
+                  src="./images/parallelogram.png"
+                  class="card-img-top w-50"
+                  alt="..."
+                />
+              </div>
+              <div class="card-body text-center">
+                <h5 class="card-title">Parallelogram</h5>
+                <p class="card-text">Area (A) = b X h</p>
+                <p class="card-text">b= 10 cm, h = 12 cm</p>
+                <div class="input-group mb-3">
+                    <input
+                      type="text"
+                      class="form-control bg-body-secondary"
+                      id="parallelogram-b"
+                      placeholder="b"
+                      aria-label="Username"
+                    />
+                    <span class="input-group-text">cm</span>
+                    <input
+                      type="text"
+                      class="form-control bg-body-secondary"
+                      id="parallelogram-h"
+                      placeholder="h"
+                      aria-label="Server"
+                    />
+                    <span class="input-group-text">cm</span>
+                  </div>
+              </div>
+              <div class="card-footer bg-white border-0">
+                <button href="#" class="btn btn-primary w-100" onclick="captureElement('parallelogram', 'parallelogram-b', 'parallelogram-h')">Calculate</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card h-100">
+              <div class="d-flex justify-content-center mt-2">
+                <img
+                  src="./images/rhombus.png"
+                  class="card-img-top w-50"
+                  alt="..."
+                />
+              </div>
+              <div class="card-body text-center">
+                <h5 class="card-title">Rhombus</h5>
+                <p class="card-text">Area (A) = 0.5 X d1 X d2</p>
+                <p class="card-text">
+                  d<sub>1</sub> = 16 cm, d<sub>2</sub> = 4 cm
+                </p>
+                <div class="input-group mb-3">
+                    <input
+                      type="text"
+                      class="form-control bg-body-secondary"
+                      id="rhombus-d1"
+                      placeholder="d1"
+                      aria-label="Username"
+                    />
+                    <span class="input-group-text">cm</span>
+                    <input
+                      type="text"
+                      class="form-control bg-body-secondary"
+                      id="rhombus-d2"
+                      placeholder="d2"
+                      aria-label="Server"
+                    />
+                    <span class="input-group-text">cm</span>
+                  </div>
+              </div>
+              <div class="card-footer bg-white border-0">
+                <button href="#" class="btn btn-primary w-100" onclick="captureElement('rhombus', 'rhombus-d1', 'rhombus-d2')">Calculate</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card h-100">
+              <div class="d-flex justify-content-center mt-2">
+                <img
+                  src="./images/pentagon.png"
+                  class="card-img-top w-50"
+                  alt="..."
+                />
+              </div>
+              <div class="card-body text-center">
+                <h5 class="card-title">Pentagon</h5>
+                <p class="card-text">Area (A) = 0.5 X p X b</p>
+                <p class="card-text">p = 6 cm, b = 10 cm</p>
+                <div class="input-group mb-3">
+                    <input
+                      type="text"
+                      class="form-control bg-body-secondary"
+                      id="pentagon-p"
+                      placeholder="p"
+                      aria-label="Username"
+                    />
+                    <span class="input-group-text">cm</span>
+                    <input
+                      type="text"
+                      class="form-control bg-body-secondary"
+                      id="pentagon-b"
+                      placeholder="b"
+                      aria-label="Server"
+                    />
+                    <span class="input-group-text">cm</span>
+                  </div>
+              </div>
+              <div class="card-footer bg-white border-0">
+                <button href="#" class="btn btn-primary w-100" onclick="captureElement('pentagon', 'pentagon-p', 'pentagon-b')">Calculate</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card h-100">
+              <div class="d-flex justify-content-center mt-2">
+                <img
+                  src="./images/ellipse.png"
+                  class="card-img-top w-50"
+                  alt="..."
+                />
+              </div>
+              <div class="card-body text-center">
+                <h5 class="card-title">Ellipse</h5>
+                <p class="card-text">Area (A) = πab</p>
+                <p class="card-text">a = 5 cm, b = 4 cm</p>
+                <div class="input-group mb-3">
+                    <input
+                      type="text"
+                      class="form-control bg-body-secondary"
+                      id="ellipse-a"
+                      placeholder="a"
+                      aria-label="Username"
+                    />
+                    <span class="input-group-text">cm</span>
+                    <input
+                      type="text"
+                      class="form-control bg-body-secondary"
+                      id="ellipse-b"
+                      placeholder="b"
+                      aria-label="Server"
+                    />
+                    <span class="input-group-text">cm</span>
+                  </div>
+              </div>
+              <div class="card-footer bg-white border-0">
+                <button href="#" class="btn btn-primary w-100" onclick="captureElement('ellipse', 'ellipse-a', 'ellipse-b')">Calculate</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mt-4">
+          <h4 class="text-center underline"><u>Area Calculation</u></h4>
+          <div class="" id="calculation-area">
+            
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- main section ends -->
+
+    <!-- Js -->
+    <script src="./scripts/utilities.js">
+
+    </script>
+    <!-- Bootstrap js -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
